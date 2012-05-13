@@ -26,8 +26,10 @@
 
 - (IBAction)mainScreenPressed:(id)sender;
 - (void)exitToMainScreen;
+- (void)confirmExitToMainScreen;
 - (IBAction)resetGamePressed:(id)sender;
 - (void)resetGame;
+- (void)confirmResetGame;
 
 
 - (void)addBlocksAndLivesToView;

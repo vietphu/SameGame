@@ -40,7 +40,6 @@
                             context:NULL];
         }
     }
-    
     return self;
 }
 
@@ -125,17 +124,15 @@
             }
             break;
     }
-    
-//    if (buttonIndex == 0) {
-//        [self resetGamePressed:nil];
-//    }
-//    else {
-//        [self mainScreenPressed:nil];
-//    }
 }
 
 #pragma mark - Buttons Pressed
 - (void)mainScreenPressed:(id)sender
+{
+    [self confirmExitToMainScreen];
+}
+
+- (void)confirmExitToMainScreen
 {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Exit Game to Main Menu" 
                                                     message:@"Are you sure?"
@@ -158,6 +155,11 @@
 }
 
 - (void)resetGamePressed:(id)sender
+{
+    [self confirmResetGame];
+}
+
+- (void)confirmResetGame
 {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Reset Game"
                                                     message:@"Are you sure?"
