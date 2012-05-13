@@ -14,8 +14,6 @@
 @implementation BoardViewController
 
 @synthesize board = _board;
-@synthesize mainScreenButton = _mainScreen;
-@synthesize resetGameButton = _resetGame;
 @synthesize lifeCounter = _lifeCounter;
 @synthesize levelCounter = _levelCounter;
 @synthesize blocksCounter = _blocksRemoved;
@@ -69,8 +67,6 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view
     self.board = nil;
-    self.mainScreenButton = nil;
-    self.resetGameButton = nil;
     self.lifeCounter = nil;
     self.blocksCounter = nil;
     self.observableValues = nil;
@@ -129,11 +125,6 @@
 #pragma mark - Buttons Pressed
 - (void)mainScreenPressed:(id)sender
 {
-    [self confirmExitToMainScreen];
-}
-
-- (void)confirmExitToMainScreen
-{
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Exit Game to Main Menu" 
                                                     message:@"Are you sure?"
                                                    delegate:self 
@@ -155,11 +146,6 @@
 }
 
 - (void)resetGamePressed:(id)sender
-{
-    [self confirmResetGame];
-}
-
-- (void)confirmResetGame
 {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Reset Game"
                                                     message:@"Are you sure?"

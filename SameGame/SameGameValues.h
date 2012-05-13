@@ -13,7 +13,7 @@
 #define NUMBER_OF_COLUMNS       10 // normal = 20, test = 10
 #define NUMBER_OF_ROWS          10 // normal = 24, test = 10
 
-#define ANIMATION_DURATION      0.05 // controls the downward and leftward movement
+#define ANIMATION_DURATION      0.25 // controls the downward and leftward movement
 
 #define ACCEPTABLE_REMAINDER    10   // number of boxes left on board for level up
 

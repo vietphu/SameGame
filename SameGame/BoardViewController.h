@@ -14,8 +14,6 @@
 @interface BoardViewController : UIViewController <UIAlertViewDelegate, UITextFieldDelegate>
 
 @property (strong, nonatomic) BoardModel *board;
-@property (strong, nonatomic) IBOutlet UIButton *mainScreenButton;
-@property (strong, nonatomic) IBOutlet UIButton *resetGameButton;
 
 @property (strong, nonatomic) IBOutlet UILabel *lifeCounter;
 @property (strong, nonatomic) IBOutlet UILabel *blocksCounter;
@@ -26,10 +24,8 @@
 
 - (IBAction)mainScreenPressed:(id)sender;
 - (void)exitToMainScreen;
-- (void)confirmExitToMainScreen;
 - (IBAction)resetGamePressed:(id)sender;
 - (void)resetGame;
-- (void)confirmResetGame;
 
 
 - (void)addBlocksAndLivesToView;
