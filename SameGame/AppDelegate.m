@@ -1,22 +1,28 @@
 //
-//  AppDelegate.m
+//  EIVAppDelegate.m
 //  SameGame
 //
-//  Created by Eno Compton on 5/13/12.
+//  Created by Eno Compton on 3/24/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "RootViewController.h"
+#import "BoardViewController.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
+@synthesize rootView = _rootView;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    self.rootView = [[RootViewController alloc] initWithNibName:@"RootVC" bundle:nil];
+    [self.window addSubview:self.rootView.view];
+    
     [self.window makeKeyAndVisible];
     return YES;
 }

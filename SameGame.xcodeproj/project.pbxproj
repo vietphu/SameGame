@@ -12,7 +12,20 @@
 		9D680C0D155FEAB4006FBAEE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D680C0C155FEAB4006FBAEE /* CoreGraphics.framework */; };
 		9D680C13155FEAB4006FBAEE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9D680C11155FEAB4006FBAEE /* InfoPlist.strings */; };
 		9D680C15155FEAB4006FBAEE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D680C14155FEAB4006FBAEE /* main.m */; };
-		9D680C19155FEAB4006FBAEE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D680C18155FEAB4006FBAEE /* AppDelegate.m */; };
+		9D680C21155FEACC006FBAEE /* BoardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D680C20155FEACC006FBAEE /* BoardModel.m */; };
+		9D680C24155FEAD8006FBAEE /* BoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D680C23155FEAD8006FBAEE /* BoardViewController.m */; };
+		9D680C27155FEAE0006FBAEE /* HighScoresModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D680C26155FEAE0006FBAEE /* HighScoresModel.m */; };
+		9D680C2A155FEAE7006FBAEE /* HighScoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D680C29155FEAE7006FBAEE /* HighScoresViewController.m */; };
+		9D680C2D155FEAEF006FBAEE /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D680C2C155FEAEF006FBAEE /* RootViewController.m */; };
+		9D680C33155FEAF9006FBAEE /* SameGameBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D680C2F155FEAF9006FBAEE /* SameGameBlock.m */; };
+		9D680C34155FEAF9006FBAEE /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D680C32155FEAF9006FBAEE /* Score.m */; };
+		9D680C39155FEB0D006FBAEE /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D680C36155FEB0D006FBAEE /* SettingsViewController.m */; };
+		9D680C3A155FEB0D006FBAEE /* UIColor+RandomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D680C38155FEB0D006FBAEE /* UIColor+RandomColor.m */; };
+		9D680C42155FEB29006FBAEE /* BoardVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D680C3E155FEB29006FBAEE /* BoardVC.xib */; };
+		9D680C43155FEB29006FBAEE /* HighScoresVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D680C3F155FEB29006FBAEE /* HighScoresVC.xib */; };
+		9D680C44155FEB29006FBAEE /* RootVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D680C40155FEB29006FBAEE /* RootVC.xib */; };
+		9D680C45155FEB29006FBAEE /* SettingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D680C41155FEB29006FBAEE /* SettingsVC.xib */; };
+		9DE7B94D155FED900013E380 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DE7B94C155FED900013E380 /* AppDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +33,35 @@
 		9D680C08155FEAB4006FBAEE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9D680C0A155FEAB4006FBAEE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9D680C0C155FEAB4006FBAEE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		9D680C10155FEAB4006FBAEE /* SameGame-Info.plist */ = {isa = PBXFileReference; path = "SameGame-Info.plist"; sourceTree = "<group>"; };
+		9D680C10155FEAB4006FBAEE /* SameGame-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SameGame-Info.plist"; sourceTree = "<group>"; };
 		9D680C12155FEAB4006FBAEE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9D680C14155FEAB4006FBAEE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9D680C16155FEAB4006FBAEE /* SameGame-Prefix.pch */ = {isa = PBXFileReference; path = "SameGame-Prefix.pch"; sourceTree = "<group>"; };
-		9D680C17155FEAB4006FBAEE /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
-		9D680C18155FEAB4006FBAEE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9D680C16155FEAB4006FBAEE /* SameGame-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SameGame-Prefix.pch"; sourceTree = "<group>"; };
+		9D680C1F155FEACC006FBAEE /* BoardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardModel.h; sourceTree = "<group>"; };
+		9D680C20155FEACC006FBAEE /* BoardModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardModel.m; sourceTree = "<group>"; };
+		9D680C22155FEAD8006FBAEE /* BoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardViewController.h; sourceTree = "<group>"; };
+		9D680C23155FEAD8006FBAEE /* BoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardViewController.m; sourceTree = "<group>"; };
+		9D680C25155FEAE0006FBAEE /* HighScoresModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighScoresModel.h; sourceTree = "<group>"; };
+		9D680C26155FEAE0006FBAEE /* HighScoresModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighScoresModel.m; sourceTree = "<group>"; };
+		9D680C28155FEAE7006FBAEE /* HighScoresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighScoresViewController.h; sourceTree = "<group>"; };
+		9D680C29155FEAE7006FBAEE /* HighScoresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighScoresViewController.m; sourceTree = "<group>"; };
+		9D680C2B155FEAEF006FBAEE /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		9D680C2C155FEAEF006FBAEE /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		9D680C2E155FEAF9006FBAEE /* SameGameBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SameGameBlock.h; sourceTree = "<group>"; };
+		9D680C2F155FEAF9006FBAEE /* SameGameBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SameGameBlock.m; sourceTree = "<group>"; };
+		9D680C30155FEAF9006FBAEE /* SameGameValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SameGameValues.h; sourceTree = "<group>"; };
+		9D680C31155FEAF9006FBAEE /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Score.h; sourceTree = "<group>"; };
+		9D680C32155FEAF9006FBAEE /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Score.m; sourceTree = "<group>"; };
+		9D680C35155FEB0D006FBAEE /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		9D680C36155FEB0D006FBAEE /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		9D680C37155FEB0D006FBAEE /* UIColor+RandomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RandomColor.h"; sourceTree = "<group>"; };
+		9D680C38155FEB0D006FBAEE /* UIColor+RandomColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RandomColor.m"; sourceTree = "<group>"; };
+		9D680C3E155FEB29006FBAEE /* BoardVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoardVC.xib; sourceTree = "<group>"; };
+		9D680C3F155FEB29006FBAEE /* HighScoresVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HighScoresVC.xib; sourceTree = "<group>"; };
+		9D680C40155FEB29006FBAEE /* RootVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootVC.xib; sourceTree = "<group>"; };
+		9D680C41155FEB29006FBAEE /* SettingsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsVC.xib; sourceTree = "<group>"; };
+		9DE7B94B155FED900013E380 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9DE7B94C155FED900013E380 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +108,14 @@
 		9D680C0E155FEAB4006FBAEE /* SameGame */ = {
 			isa = PBXGroup;
 			children = (
-				9D680C17155FEAB4006FBAEE /* AppDelegate.h */,
-				9D680C18155FEAB4006FBAEE /* AppDelegate.m */,
+				9DE7B94B155FED900013E380 /* AppDelegate.h */,
+				9DE7B94C155FED900013E380 /* AppDelegate.m */,
+				9D680C30155FEAF9006FBAEE /* SameGameValues.h */,
+				9D680C47155FEBA2006FBAEE /* View Controllers */,
+				9D680C48155FEBC6006FBAEE /* Models */,
+				9D680C49155FEBE4006FBAEE /* Custom Objects */,
+				9D680C4A155FEBFD006FBAEE /* Categories */,
+				9D680C46155FEB8B006FBAEE /* Xib Files */,
 				9D680C0F155FEAB4006FBAEE /* Supporting Files */,
 			);
 			path = SameGame;
@@ -88,6 +130,63 @@
 				9D680C16155FEAB4006FBAEE /* SameGame-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9D680C46155FEB8B006FBAEE /* Xib Files */ = {
+			isa = PBXGroup;
+			children = (
+				9D680C3E155FEB29006FBAEE /* BoardVC.xib */,
+				9D680C3F155FEB29006FBAEE /* HighScoresVC.xib */,
+				9D680C40155FEB29006FBAEE /* RootVC.xib */,
+				9D680C41155FEB29006FBAEE /* SettingsVC.xib */,
+			);
+			name = "Xib Files";
+			sourceTree = "<group>";
+		};
+		9D680C47155FEBA2006FBAEE /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9D680C2B155FEAEF006FBAEE /* RootViewController.h */,
+				9D680C2C155FEAEF006FBAEE /* RootViewController.m */,
+				9D680C22155FEAD8006FBAEE /* BoardViewController.h */,
+				9D680C23155FEAD8006FBAEE /* BoardViewController.m */,
+				9D680C28155FEAE7006FBAEE /* HighScoresViewController.h */,
+				9D680C29155FEAE7006FBAEE /* HighScoresViewController.m */,
+				9D680C35155FEB0D006FBAEE /* SettingsViewController.h */,
+				9D680C36155FEB0D006FBAEE /* SettingsViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		9D680C48155FEBC6006FBAEE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9D680C25155FEAE0006FBAEE /* HighScoresModel.h */,
+				9D680C26155FEAE0006FBAEE /* HighScoresModel.m */,
+				9D680C1F155FEACC006FBAEE /* BoardModel.h */,
+				9D680C20155FEACC006FBAEE /* BoardModel.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		9D680C49155FEBE4006FBAEE /* Custom Objects */ = {
+			isa = PBXGroup;
+			children = (
+				9D680C2E155FEAF9006FBAEE /* SameGameBlock.h */,
+				9D680C2F155FEAF9006FBAEE /* SameGameBlock.m */,
+				9D680C31155FEAF9006FBAEE /* Score.h */,
+				9D680C32155FEAF9006FBAEE /* Score.m */,
+			);
+			name = "Custom Objects";
+			sourceTree = "<group>";
+		};
+		9D680C4A155FEBFD006FBAEE /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				9D680C37155FEB0D006FBAEE /* UIColor+RandomColor.h */,
+				9D680C38155FEB0D006FBAEE /* UIColor+RandomColor.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +240,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D680C13155FEAB4006FBAEE /* InfoPlist.strings in Resources */,
+				9D680C42155FEB29006FBAEE /* BoardVC.xib in Resources */,
+				9D680C43155FEB29006FBAEE /* HighScoresVC.xib in Resources */,
+				9D680C44155FEB29006FBAEE /* RootVC.xib in Resources */,
+				9D680C45155FEB29006FBAEE /* SettingsVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +255,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D680C15155FEAB4006FBAEE /* main.m in Sources */,
-				9D680C19155FEAB4006FBAEE /* AppDelegate.m in Sources */,
+				9D680C21155FEACC006FBAEE /* BoardModel.m in Sources */,
+				9D680C24155FEAD8006FBAEE /* BoardViewController.m in Sources */,
+				9D680C27155FEAE0006FBAEE /* HighScoresModel.m in Sources */,
+				9D680C2A155FEAE7006FBAEE /* HighScoresViewController.m in Sources */,
+				9D680C2D155FEAEF006FBAEE /* RootViewController.m in Sources */,
+				9D680C33155FEAF9006FBAEE /* SameGameBlock.m in Sources */,
+				9D680C34155FEAF9006FBAEE /* Score.m in Sources */,
+				9D680C39155FEB0D006FBAEE /* SettingsViewController.m in Sources */,
+				9D680C3A155FEB0D006FBAEE /* UIColor+RandomColor.m in Sources */,
+				9DE7B94D155FED900013E380 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +370,7 @@
 				9D680C1E155FEAB4006FBAEE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
