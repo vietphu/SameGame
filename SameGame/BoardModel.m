@@ -191,19 +191,12 @@
 {
     if ([self.selectedBlocks count] != 1) {
         for (SameGameBlock *block in self.selectedBlocks) {
-            
-            // animate blocks fading away, moving them only after the animation completes
-//            [UIView animateWithDuration:ANIMATION_DURATION delay:0 options:UIViewAnimationOptionCurveLinear 
-//                             animations:^(void){ block.alpha = 0; } 
-//                             completion:^(BOOL finished){   self.blocksRemaining -= 1;
-//                                                            self.blocksRemoved += 1;
-//                                                            block.hidden = YES;
-//                                                            [self moveBlocks]; }
-//            ];
-            
             block.hidden = YES;
             [self moveBlocks]; 
         }
+        
+        // update levelOver BOOL
+        self.levelOver = [self isLevelOver];
         
         NSUInteger selectedBlockCount = [self.selectedBlocks count];
         
@@ -322,9 +315,6 @@
             nextEmptyColumn++;
         }
     }
-    
-    // update levelOver BOOL
-    self.levelOver = [self isLevelOver];
 }
 
 #pragma mark - Level and Game Over
@@ -340,8 +330,6 @@
        returns YES if no pairs remain on board */
     
     // There is a false positive in the algorithm below. FIND IT.
-    
-    NSLog(@"blocks remaining = %d", self.blocksRemaining);
     
     SameGameBlock *testerBlock;
     SameGameBlock *aboveBlock;
