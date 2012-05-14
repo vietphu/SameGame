@@ -24,7 +24,7 @@
 - (void)testBlockAtCol:(int)col andRow:(int)row color:(UIColor *)color direction:(DIRECTION)dir;
 - (void)unselectBlock;
 - (void)removeBlocks;
-- (void)moveBlocks;
+- (void)moveBlock;
 
 - (void)resetLifeCount;
 - (BOOL)isLevelOver;

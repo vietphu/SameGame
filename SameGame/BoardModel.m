@@ -192,7 +192,7 @@
     if ([self.selectedBlocks count] != 1) {
         for (SameGameBlock *block in self.selectedBlocks) {
             block.hidden = YES;
-            [self moveBlocks]; 
+            [self moveBlock]; 
         }
         
         // update levelOver BOOL
@@ -215,7 +215,7 @@
     [self.selectedBlocks removeAllObjects];
 }
 
-- (void)moveBlocks
+- (void)moveBlock
 {
     // check all colomns from left to right, moving blocks down
     for (int col = 0; col < NUMBER_OF_COLUMNS; col++) {
