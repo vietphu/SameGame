@@ -13,7 +13,7 @@
 #define NUMBER_OF_COLUMNS       10 // normal = 20, test = 10
 #define NUMBER_OF_ROWS          10 // normal = 24, test = 10
 
-#define ANIMATION_DURATION      0.25 // controls the downward and leftward movement
+#define ANIMATION_DURATION      0.15 // controls the downward and leftward movement
 
 #define ACCEPTABLE_REMAINDER    10   // number of boxes left on board for level up
 
@@ -36,7 +36,8 @@ enum {
     EXIT_GAME,
     RESET_GAME,
     HIGH_SCORE,
-    GAME_OVER
+    GAME_OVER,
+    NEXT_LEVEL
 };
 
 #endif

@@ -111,13 +111,17 @@
         case HIGH_SCORE: // New High Score!
             break;
         
-        default: // GAME_OVER
+        case GAME_OVER: // Game over
             if (buttonIndex == 0) {
                 [self resetGame];
             }
             else {
                 [self exitToMainScreen];
             }
+            break;
+            
+        default: // NEXT_LEVEL
+            [self newLevel];
             break;
     }
 }
@@ -185,6 +189,7 @@
                         change:(NSDictionary *)change context:(void *)context
 {
     if (keyPath == @"levelOver" && self.board.levelOver) {
+        NSLog(@"hey look the level is over");
         [self handleLevelOver];
     }
     
@@ -219,11 +224,11 @@
     else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Next Level!!!" 
                                                         message:@"NICE!"
-                                                       delegate:nil
+                                                       delegate:self
                                               cancelButtonTitle:@"Let's go!"
                                               otherButtonTitles:nil];
+        alert.tag = NEXT_LEVEL;
         [alert show];
-        [self newLevel];
     }
 }
 

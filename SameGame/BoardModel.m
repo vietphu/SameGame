@@ -85,6 +85,8 @@
 - (void)selectBlock:(id)sender // UIControlEventTouchDown
 {
     SameGameBlock *block = (SameGameBlock *)sender;
+ 
+    NSLog(@"selected block col, row = (%d, %d)", block.col, block.row);
     
     block.blockColor = [UIColor grayColor];
     [block setNeedsDisplay];
@@ -204,7 +206,6 @@
         }
         
         NSUInteger selectedBlockCount = [self.selectedBlocks count];
-        NSLog(@"value of selectedBlockCount = %d", selectedBlockCount);
         
         self.currentScore += (selectedBlockCount * SCORE_MULTIPLIER);
         
@@ -340,6 +341,8 @@
     
     // There is a false positive in the algorithm below. FIND IT.
     
+    NSLog(@"blocks remaining = %d", self.blocksRemaining);
+    
     SameGameBlock *testerBlock;
     SameGameBlock *aboveBlock;
     SameGameBlock *belowBlock;
@@ -369,7 +372,7 @@
             
             if (below < NUMBER_OF_ROWS) {
                 belowBlock = blockArray[col][below];
-                if ((belowBlock.hidden == NO)&& (belowBlock.blockColor == testerBlock.blockColor) ) {
+                if ((belowBlock.hidden == NO) && (belowBlock.blockColor == testerBlock.blockColor) ) {
                     // NSLog(@"found below block at %d, %d", col, below);
                     return NO;
                 }
