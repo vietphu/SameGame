@@ -15,4 +15,6 @@
 @property (nonatomic, strong) NSMutableArray *topTenScores;
 @property (nonatomic, strong) Score *candidateScore;
 
+- (void)sortHighScores;
+
 @end

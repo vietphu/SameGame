@@ -24,4 +24,9 @@
     return self;
 }
 
+- (void)sortHighScores
+{
+
+}
+
 @end
