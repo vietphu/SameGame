@@ -10,8 +10,8 @@
 #define SameGame_SameGameValues_h
 
 /* To change the number of columns and rows, change the values here */
-#define NUMBER_OF_COLUMNS       10 // normal = 20, test = 10
-#define NUMBER_OF_ROWS          10 // normal = 24, test = 10
+#define NUMBER_OF_COLUMNS       15 // normal = 20, test = 10
+#define NUMBER_OF_ROWS          15 // normal = 24, test = 10
 
 #define FADE_DURATION           0.15 // controls the downward and leftward movement
 #define MOVE_DURATION           0.1

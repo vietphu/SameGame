@@ -204,17 +204,12 @@
                          }
          
                          completion:^(BOOL finished) {
-                             
-                             NSLog(@"completion block called");
-                             
-                             NSLog(@"number of selected blocks = %d", [self.selectedBlocks count]);
-                             
+                            
                              for (SameGameBlock *block in self.selectedBlocks) {
                                  block.hidden = YES;
                              }
                              
                              [self moveBlock];
-                             
                              // update levelOver BOOL
                              self.levelOver = [self isLevelOver];
                              [self.selectedBlocks removeAllObjects];
