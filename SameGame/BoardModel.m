@@ -190,29 +190,44 @@
 - (void)removeBlocks // UIControlEventTouchUpInside
 {
     if ([self.selectedBlocks count] != 1) {
-        for (SameGameBlock *block in self.selectedBlocks) {
-            block.hidden = YES;
-            [self moveBlock]; 
-        }
-        
-        // update levelOver BOOL
-        self.levelOver = [self isLevelOver];
-        
-        NSUInteger selectedBlockCount = [self.selectedBlocks count];
-        
-        self.currentScore += (selectedBlockCount * SCORE_MULTIPLIER);
-        
-        self.blocksRemaining -= selectedBlockCount;
-        self.blocksRemoved   += selectedBlockCount;
+        [UIView animateWithDuration:FADE_DURATION
+                         
+                         animations:^(void) {
+                             for (SameGameBlock *block in self.selectedBlocks) {
+                                 block.alpha = 0;
+                             }
+                             // calculate score and block counts
+                             NSUInteger selectedBlockCount = [self.selectedBlocks count];
+                             self.currentScore += (selectedBlockCount * SCORE_MULTIPLIER);
+                             self.blocksRemaining -= selectedBlockCount;
+                             self.blocksRemoved   += selectedBlockCount;
+                         }
+         
+                         completion:^(BOOL finished) {
+                             
+                             NSLog(@"completion block called");
+                             
+                             NSLog(@"number of selected blocks = %d", [self.selectedBlocks count]);
+                             
+                             for (SameGameBlock *block in self.selectedBlocks) {
+                                 block.hidden = YES;
+                             }
+                             
+                             [self moveBlock];
+                             
+                             // update levelOver BOOL
+                             self.levelOver = [self isLevelOver];
+                             [self.selectedBlocks removeAllObjects];
+                         }
+         ];  
     }
     else {
         SameGameBlock *oneBlock = [self.selectedBlocks objectAtIndex:0];
         oneBlock.blockColor = oneBlock.originalColor;
         [oneBlock setNeedsDisplay];
         oneBlock.tested = NO;
+        [self.selectedBlocks removeAllObjects];
     }
-
-    [self.selectedBlocks removeAllObjects];
 }
 
 - (void)moveBlock
@@ -247,7 +262,7 @@
                 int occupiedBlockRow = occupiedBlock.row;
                 
                 // animate swap of empty block with new block
-                [UIView animateWithDuration:ANIMATION_DURATION animations:^(void) {
+                [UIView animateWithDuration:MOVE_DURATION animations:^(void) {
                     occupiedBlock.center = emptyBlockCenter;
                 }];
                 
@@ -298,7 +313,7 @@
                 int occupiedBlockColumn = occupiedBlock.col;
                 
                 // animate column shift to the left
-                [UIView animateWithDuration:ANIMATION_DURATION animations:^(void) {
+                [UIView animateWithDuration:MOVE_DURATION animations:^(void) {
                     occupiedBlock.center = emptyBlockCenter;
                 }];
                 
