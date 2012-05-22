@@ -9,9 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface HighScoresViewController : UIViewController
-{
-    IBOutlet UIButton *returnToMenuButton;
-}
+
+@property (nonatomic, strong) IBOutlet UIButton *returnToMenuButton;
 
 @property (nonatomic, strong) IBOutlet UILabel *score0;
 @property (nonatomic, strong) IBOutlet UILabel *score1;

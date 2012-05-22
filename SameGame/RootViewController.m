@@ -13,6 +13,10 @@
 
 @implementation RootViewController
 
+@synthesize playGameButton = _playGameButton;
+@synthesize settingsButton = _settingsButton;
+@synthesize highScoresButton = _highScoresButton;
+
 @synthesize boardVC = _boardVC;
 @synthesize highScoresVC = _highScoresVC;
 @synthesize settingsVC = _settingsVC;

@@ -9,9 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface SettingsViewController : UIViewController
-{
-    IBOutlet UIButton *returnToMenuButton;
-}
+
+@property (nonatomic, strong) IBOutlet UIButton *returnToMenuButton;
 
 - (IBAction)returnToMenuPressed:(id)sender;
 

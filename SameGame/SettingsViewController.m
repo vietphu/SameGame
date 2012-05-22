@@ -14,6 +14,8 @@
 
 @implementation SettingsViewController
 
+@synthesize returnToMenuButton = _returnToMenuButton;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

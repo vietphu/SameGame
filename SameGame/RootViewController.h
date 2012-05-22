@@ -13,11 +13,10 @@
 @class SettingsViewController;
 
 @interface RootViewController : UIViewController
-{
-    IBOutlet UIButton *playGameButton;
-    IBOutlet UIButton *settingsButton;
-    IBOutlet UIButton *highScoresButton;
-}
+
+@property (nonatomic, strong) IBOutlet UIButton *playGameButton;
+@property (nonatomic, strong) IBOutlet UIButton *settingsButton;
+@property (nonatomic, strong) IBOutlet UIButton *highScoresButton;
 
 @property (nonatomic, strong) BoardViewController *boardVC;
 @property (nonatomic, strong) HighScoresViewController *highScoresVC;
