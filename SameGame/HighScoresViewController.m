@@ -15,16 +15,8 @@
 @implementation HighScoresViewController
 
 @synthesize returnToMenuButton = _returnToMenuButton;
-@synthesize score0 = _score0;
-@synthesize score1 = _score1;
-@synthesize score2 = _score2;
-@synthesize score3 = _score3;
-@synthesize score4 = _score4;
-@synthesize score5 = _score5;
-@synthesize score6 = _score6;
-@synthesize score7 = _score7;
-@synthesize score8 = _score8;
-@synthesize score9 = _score9;
+@synthesize playerNames = _playerNames;
+@synthesize playerScores = _playerScores;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

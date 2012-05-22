@@ -12,17 +12,8 @@
 
 @property (nonatomic, strong) IBOutlet UIButton *returnToMenuButton;
 
-@property (nonatomic, strong) IBOutlet UILabel *score0;
-@property (nonatomic, strong) IBOutlet UILabel *score1;
-@property (nonatomic, strong) IBOutlet UILabel *score2;
-@property (nonatomic, strong) IBOutlet UILabel *score3;
-@property (nonatomic, strong) IBOutlet UILabel *score4;
-
-@property (nonatomic, strong) IBOutlet UILabel *score5;
-@property (nonatomic, strong) IBOutlet UILabel *score6;
-@property (nonatomic, strong) IBOutlet UILabel *score7;
-@property (nonatomic, strong) IBOutlet UILabel *score8;
-@property (nonatomic, strong) IBOutlet UILabel *score9;
+@property (nonatomic, strong) IBOutletCollection(UILabel) NSMutableArray *playerNames;
+@property (nonatomic, strong) IBOutletCollection(UILabel) NSMutableArray *playerScores;
 
 - (IBAction)returnToMenuPressed:(id)sender;
 

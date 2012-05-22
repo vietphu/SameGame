@@ -12,7 +12,7 @@
 
 @synthesize playerName = _playerName;
 @synthesize score = _score;
-@synthesize     scoreDate = _gameDate;
+@synthesize scoreDate = _scoreDate;
 
 // this is the designate initializer
 - (id)initWithScore:(NSInteger)aScore playerName:(NSString *)aPlayerName
