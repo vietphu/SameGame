@@ -16,10 +16,12 @@
 
 @synthesize board = _board;
 @synthesize highScores = _highScores;
+
 @synthesize lifeCounter = _lifeCounter;
 @synthesize levelCounter = _levelCounter;
 @synthesize blocksCounter = _blocksRemoved;
 @synthesize scoreCounter = _scoreCounter;
+
 @synthesize observableValues = _observableValues;
 
 #pragma mark - Initialization

@@ -21,13 +21,11 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    
     if (self) {
         
-        // check if HighScores.plist exists
-        // create it, if it does not
-        
-        
     }
+    
     return self;
 }
 

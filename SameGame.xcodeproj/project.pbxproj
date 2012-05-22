@@ -161,10 +161,10 @@
 		9D680C48155FEBC6006FBAEE /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9D680C25155FEAE0006FBAEE /* HighScoresModel.h */,
-				9D680C26155FEAE0006FBAEE /* HighScoresModel.m */,
 				9D680C1F155FEACC006FBAEE /* BoardModel.h */,
 				9D680C20155FEACC006FBAEE /* BoardModel.m */,
+				9D680C25155FEAE0006FBAEE /* HighScoresModel.h */,
+				9D680C26155FEAE0006FBAEE /* HighScoresModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
