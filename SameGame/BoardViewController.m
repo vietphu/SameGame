@@ -113,10 +113,10 @@
         
         case GAME_OVER: // Game over
             if (buttonIndex == 0) {
-                [self resetGame];
+                [self exitToMainScreen];
             }
             else {
-                [self exitToMainScreen];
+                [self resetGame];
             }
             break;
             
@@ -257,8 +257,8 @@
         UIAlertView *gameOverAlert = [[UIAlertView alloc] initWithTitle:@"Game Over!" 
                                                                 message:@"Try again!" 
                                                                delegate:self 
-                                                      cancelButtonTitle:@"Reset Level" 
-                                                      otherButtonTitles:@"Main Menu", nil];
+                                                      cancelButtonTitle:@"Main Menu" 
+                                                      otherButtonTitles:@"Reset Game", nil];
         gameOverAlert.tag = GAME_OVER;
         [gameOverAlert show];
     }
