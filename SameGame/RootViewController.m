@@ -46,6 +46,9 @@
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
+    self.boardVC = nil;
+    self.highScoresButton = nil;
+    self.settingsVC = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

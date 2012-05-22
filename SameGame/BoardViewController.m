@@ -280,7 +280,8 @@
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {    
     NSLog(@"textFieldDidEndEditing called");
-    Score *newHighScore = [[Score alloc] initWithScore:self.board.currentScore playerName:textField.text];
+    Score *newHighScore = [[Score alloc] initWithScore:[NSNumber numberWithInt:self.board.currentScore] 
+                                            playerName:textField.text];
     [self saveHighScore:newHighScore];
 }
 
@@ -297,7 +298,7 @@
 - (void)saveHighScore:(Score *)newHighScore
 {
     // add currentScore to a Score object and store in HighScoresModel
-    NSLog(@"Will save user: %@ with score: %d", newHighScore.playerName, newHighScore.score);
+    NSLog(@"Will save user: %@ with score: %d", newHighScore.playerName, [newHighScore.score intValue]);
 }
 
 @end

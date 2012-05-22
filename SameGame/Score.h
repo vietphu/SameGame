@@ -10,10 +10,10 @@
 
 @interface Score : NSObject
 
-- (id)initWithScore:(NSInteger)aScore playerName:(NSString *)aPlayerName;
+- (id)initWithScore:(NSNumber *)aScore playerName:(NSString *)aPlayerName;
 
 @property (strong, nonatomic) NSString *playerName;
-@property NSInteger score;
+@property NSNumber *score;
 @property NSDate *scoreDate;
 
 @end

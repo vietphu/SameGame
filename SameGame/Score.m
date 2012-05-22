@@ -15,7 +15,7 @@
 @synthesize scoreDate = _scoreDate;
 
 // this is the designate initializer
-- (id)initWithScore:(NSInteger)aScore playerName:(NSString *)aPlayerName
+- (id)initWithScore:(NSNumber *)aScore playerName:(NSString *)aPlayerName
 {
     self.playerName = aPlayerName;
     self.score = aScore;
@@ -25,7 +25,7 @@
 
 - (id)init
 {
-    return [self initWithScore:0 playerName:@"No Name"];
+    return [self initWithScore:[NSNumber numberWithInt:0] playerName:@"No Name"];
 }
 
 @end
