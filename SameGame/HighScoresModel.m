@@ -11,7 +11,6 @@
 
 @implementation HighScoresModel
 
-@synthesize candidateScore = _candidateScore;
 @synthesize topTenScores = _topTenScores;
 
 - (id)init
@@ -19,21 +18,23 @@
     self = [super init];
     
     if (self) {
+        self.topTenScores = [[NSMutableArray alloc] init];
         
+        // read from file here adding names and scores
+        // and "No name" and "No score" or some such to empty values
     }
     
     return self;
 }
 
-- (void)sortHighScores
+- (void)dealloc
 {
-
+    self.topTenScores = nil;
 }
 
-- (void)saveHighScore:(Score *)newHighScore
+- (void)addToTopTenScores:(Score *)newScore
 {
-    // add currentScore to a Score object and store in HighScoresModel
-    NSLog(@"Will save user: %@ with score: %d", newHighScore.playerName, [newHighScore.score intValue]);
+    
 }
 
 

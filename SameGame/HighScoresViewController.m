@@ -41,8 +41,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    
-    
     // read from file
 }
 
@@ -51,9 +49,6 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
-    
-    // save file
-    
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

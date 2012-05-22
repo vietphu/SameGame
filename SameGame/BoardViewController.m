@@ -15,6 +15,7 @@
 @implementation BoardViewController
 
 @synthesize board = _board;
+@synthesize highScores = _highScores;
 @synthesize lifeCounter = _lifeCounter;
 @synthesize levelCounter = _levelCounter;
 @synthesize blocksCounter = _blocksRemoved;
@@ -28,6 +29,7 @@
 
     if (self) {
         self.board = [[BoardModel alloc] init];
+        self.highScores = [[HighScoresModel alloc] init];
         
         // Add key-value observing
         self.observableValues = [[NSArray alloc] initWithObjects:@"levelOver", @"levelNum",
@@ -68,6 +70,7 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view
     self.board = nil;
+    self.highScores = nil;
     self.lifeCounter = nil;
     self.blocksCounter = nil;
     self.observableValues = nil;
@@ -110,6 +113,7 @@
             break;
         
         case HIGH_SCORE: // New High Score!
+            [self saveHighScore:[alertView textFieldAtIndex:buttonIndex].text];
             break;
         
         case GAME_OVER: // Game over
@@ -278,19 +282,24 @@
     return newLength <= MAX_PLAYER_NAME_LENGTH;
 }
 
-- (void)textFieldDidEndEditing:(UITextField *)textField
-{    
-    NSLog(@"textFieldDidEndEditing called");
-}
-
 #pragma mark - High Scores
 - (BOOL)isHighScore
 {
-    // compares current score with those in HighScoresModel 
+    NSNumber *candidateScore = [[NSNumber alloc] initWithInt:self.board.currentScore];
     
-    // add code here to read HighScoresModel
+    for (Score *aScore in self.highScores.topTenScores) {
+        if (candidateScore > aScore.score) {
+            return TRUE;
+        }
+    }
     
-    return TRUE;
+    return FALSE;
+}
+
+- (void)saveHighScore:(NSString *)playerName
+{
+    // add currentScore to a Score object and store in HighScoresModel
+    NSLog(@"Will save player: %@ with score: %d", playerName, self.board.currentScore);
 }
 
 @end
