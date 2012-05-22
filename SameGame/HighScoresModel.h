@@ -10,15 +10,12 @@
 
 @class Score;
 
-@interface HighScoresModel : NSObject <NSCoding>
-
-
+@interface HighScoresModel : NSObject
 
 @property (nonatomic, strong) NSMutableArray *topTenScores;
 @property (nonatomic, strong) Score *candidateScore;
 
-
-
 - (void)sortHighScores;
+- (void)saveHighScore:(Score *)newHighScore;
 
 @end

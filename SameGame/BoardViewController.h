@@ -10,6 +10,7 @@
 
 @class BoardModel;
 @class Score;
+@class HighScoresModel;
 
 @interface BoardViewController : UIViewController <UIAlertViewDelegate, UITextFieldDelegate>
 
@@ -35,6 +36,5 @@
 - (void)newLevel;
 
 - (BOOL)isHighScore;
-- (void)saveHighScore:(Score *)newHighScore;
 
 @end

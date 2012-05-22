@@ -25,35 +25,39 @@
 #pragma mark - Initialization and Dealloc
 - (id)init
 {    
-    float screenWidth  = [[UIScreen mainScreen] bounds].size.width;
+    self = [super init];
     
-    float blockWidth = screenWidth / NUMBER_OF_COLUMNS;
-    float blockHeight = blockWidth;
-    
-    for (int col = 0; col < NUMBER_OF_COLUMNS; col++) {
-        for (int row = 0; row < NUMBER_OF_ROWS; row++) {
-            CGRect aRect = CGRectMake(col * blockWidth, row * blockHeight, blockWidth, blockHeight);
-            UIColor *color = [UIColor randomColor];
-            blockArray[col][row] = [[SameGameBlock alloc] initWithFrame:aRect andColor:color];
-            [blockArray[col][row] setCol:col];
-            [blockArray[col][row] setRow:row];
-            [blockArray[col][row] addTarget:self action:@selector(selectBlock:) 
-                           forControlEvents:UIControlEventTouchDown];
-            [blockArray[col][row] addTarget:self action:@selector(removeBlocks) 
-                           forControlEvents:UIControlEventTouchUpInside];
-            [blockArray[col][row] addTarget:self action:@selector(unselectBlock) 
-                           forControlEvents:UIControlEventTouchUpOutside];
+    if (self) {
+        float screenWidth  = [[UIScreen mainScreen] bounds].size.width;
+        
+        float blockWidth = screenWidth / NUMBER_OF_COLUMNS;
+        float blockHeight = blockWidth;
+        
+        for (int col = 0; col < NUMBER_OF_COLUMNS; col++) {
+            for (int row = 0; row < NUMBER_OF_ROWS; row++) {
+                CGRect aRect = CGRectMake(col * blockWidth, row * blockHeight, blockWidth, blockHeight);
+                UIColor *color = [UIColor randomColor];
+                blockArray[col][row] = [[SameGameBlock alloc] initWithFrame:aRect andColor:color];
+                [blockArray[col][row] setCol:col];
+                [blockArray[col][row] setRow:row];
+                [blockArray[col][row] addTarget:self action:@selector(selectBlock:) 
+                               forControlEvents:UIControlEventTouchDown];
+                [blockArray[col][row] addTarget:self action:@selector(removeBlocks) 
+                               forControlEvents:UIControlEventTouchUpInside];
+                [blockArray[col][row] addTarget:self action:@selector(unselectBlock) 
+                               forControlEvents:UIControlEventTouchUpOutside];
+            }
         }
+        
+        self.selectedBlocks = [[NSMutableArray alloc] init];
+        self.blocksRemaining = NUMBER_OF_ROWS * NUMBER_OF_COLUMNS;
+        self.levelOver = NO;
+        self.levelNum = 1;
+        self.livesRemaining = 10;
+        self.blocksRemoved = 0;
+        self.currentScore = 0;
     }
-    
-    self.selectedBlocks = [[NSMutableArray alloc] init];
-    self.blocksRemaining = NUMBER_OF_ROWS * NUMBER_OF_COLUMNS;
-    self.levelOver = NO;
-    self.levelNum = 1;
-    self.livesRemaining = 10;
-    self.blocksRemoved = 0;
-    self.currentScore = 0;
-    
+
     return self;
 }
 

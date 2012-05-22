@@ -10,6 +10,7 @@
 #import "BoardModel.h"
 #import "SameGameBlock.h"
 #import "UIColor+RandomColor.h"
+#import "HighScoresModel.h"
 
 @implementation BoardViewController
 
@@ -17,8 +18,8 @@
 @synthesize lifeCounter = _lifeCounter;
 @synthesize levelCounter = _levelCounter;
 @synthesize blocksCounter = _blocksRemoved;
-@synthesize observableValues = _observableValues;
 @synthesize scoreCounter = _scoreCounter;
+@synthesize observableValues = _observableValues;
 
 #pragma mark - Initialization
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -280,9 +281,6 @@
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {    
     NSLog(@"textFieldDidEndEditing called");
-    Score *newHighScore = [[Score alloc] initWithScore:[NSNumber numberWithInt:self.board.currentScore] 
-                                            playerName:textField.text];
-    [self saveHighScore:newHighScore];
 }
 
 #pragma mark - High Scores
@@ -292,13 +290,7 @@
     
     // add code here to read HighScoresModel
     
-    return FALSE;
-}
-
-- (void)saveHighScore:(Score *)newHighScore
-{
-    // add currentScore to a Score object and store in HighScoresModel
-    NSLog(@"Will save user: %@ with score: %d", newHighScore.playerName, [newHighScore.score intValue]);
+    return TRUE;
 }
 
 @end

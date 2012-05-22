@@ -14,13 +14,14 @@
 @synthesize candidateScore = _candidateScore;
 @synthesize topTenScores = _topTenScores;
 
-- (void)encodeWithCoder:(NSCoder *)aCoder
+- (id)init
 {
+    self = [super init];
     
-}
-
-- (id)initWithCoder:(NSCoder *)aDecoder
-{
+    if (self) {
+        
+    }
+    
     return self;
 }
 
@@ -28,5 +29,12 @@
 {
 
 }
+
+- (void)saveHighScore:(Score *)newHighScore
+{
+    // add currentScore to a Score object and store in HighScoresModel
+    NSLog(@"Will save user: %@ with score: %d", newHighScore.playerName, [newHighScore.score intValue]);
+}
+
 
 @end

@@ -22,6 +22,11 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        
+        // check if HighScores.plist exists
+        // create it, if it does not
+        
+        
     }
     return self;
 }
@@ -35,8 +40,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    NSString *path = [[NSBundle mainBundle] bundlePath];
-    NSLog(@"the path is: %@", path);
+    
+    
+    
+    // read from file
 }
 
 - (void)viewDidUnload
@@ -44,6 +51,8 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+    
+    // save file
     
 }
 
