@@ -135,10 +135,10 @@
 		9D680C46155FEB8B006FBAEE /* Xib Files */ = {
 			isa = PBXGroup;
 			children = (
-				9D680C3E155FEB29006FBAEE /* BoardVC.xib */,
-				9D680C3F155FEB29006FBAEE /* HighScoresVC.xib */,
 				9D680C40155FEB29006FBAEE /* RootVC.xib */,
+				9D680C3E155FEB29006FBAEE /* BoardVC.xib */,
 				9D680C41155FEB29006FBAEE /* SettingsVC.xib */,
+				9D680C3F155FEB29006FBAEE /* HighScoresVC.xib */,
 			);
 			name = "Xib Files";
 			sourceTree = "<group>";
