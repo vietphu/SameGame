@@ -60,6 +60,7 @@
 {
     NSLog(@"playGamePressed");
     self.boardVC = [[BoardViewController alloc] init];
+    [self addChildViewController:self.boardVC];
     [self.view insertSubview:self.boardVC.view aboveSubview:self.view];
 }
 
@@ -67,6 +68,7 @@
 {
     NSLog(@"highScoresPressed");
     self.highScoresVC = [[HighScoresViewController alloc] init];
+    [self addChildViewController:self.highScoresVC];
     [self.view insertSubview:self.highScoresVC.view aboveSubview:self.view];
 }
 
@@ -74,6 +76,7 @@
 {
     NSLog(@"settingsPressed");
     self.settingsVC = [[SettingsViewController alloc] init];
+    [self addChildViewController:self.settingsVC];
     [self.view insertSubview:self.settingsVC.view aboveSubview:self.view];
 }
 
