@@ -58,4 +58,16 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)loadHighScoresFile
+{
+    
+}
+
+- (void)createHighScoresFile
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *filename = [documentsDirectory stringByAppendingPathComponent:@"highScores.txt"];
+}
+
 @end

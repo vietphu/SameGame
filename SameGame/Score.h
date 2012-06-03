@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Score : NSObject
+@interface Score : NSObject <NSCoding, NSCopying>
 
-- (id)initWithScore:(NSNumber *)aScore playerName:(NSString *)aPlayerName;
+- (id)initWithScore:(int)aScore playerName:(NSString *)aPlayerName;
 
 @property (strong, nonatomic) NSString *playerName;
-@property NSNumber *score;
+@property int score;
 @property NSDate *scoreDate;
 
 @end

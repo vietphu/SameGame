@@ -19,4 +19,7 @@
 
 @property (strong, nonatomic) HighScoresModel *highScores;
 
+- (void)loadHighScoresFile;
+- (void)createHighScoresFile;
+
 @end
