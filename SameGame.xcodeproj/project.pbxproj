@@ -60,6 +60,7 @@
 		9D680C3F155FEB29006FBAEE /* HighScoresVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HighScoresVC.xib; sourceTree = "<group>"; };
 		9D680C40155FEB29006FBAEE /* RootVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootVC.xib; sourceTree = "<group>"; };
 		9D680C41155FEB29006FBAEE /* SettingsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsVC.xib; sourceTree = "<group>"; };
+		9DB87A4C157BA69C007DD3CA /* HighScoresProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HighScoresProtocol.h; sourceTree = "<group>"; };
 		9DE7B94B155FED900013E380 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9DE7B94C155FED900013E380 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +111,7 @@
 			children = (
 				9DE7B94B155FED900013E380 /* AppDelegate.h */,
 				9DE7B94C155FED900013E380 /* AppDelegate.m */,
+				9DB87A4C157BA69C007DD3CA /* HighScoresProtocol.h */,
 				9D680C30155FEAF9006FBAEE /* SameGameValues.h */,
 				9D680C47155FEBA2006FBAEE /* View Controllers */,
 				9D680C48155FEBC6006FBAEE /* Models */,

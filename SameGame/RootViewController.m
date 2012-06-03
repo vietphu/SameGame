@@ -21,6 +21,7 @@
 @synthesize highScoresVC = _highScoresVC;
 @synthesize settingsVC = _settingsVC;
 
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -39,13 +40,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"viewDidLoad called");
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
+    NSLog(@"viewDidUnload of RootVC called");
     self.boardVC = nil;
     self.highScoresButton = nil;
     self.settingsVC = nil;
@@ -60,7 +61,6 @@
 {
     NSLog(@"playGamePressed");
     self.boardVC = [[BoardViewController alloc] init];
-    [self addChildViewController:self.boardVC];
     [self.view insertSubview:self.boardVC.view aboveSubview:self.view];
 }
 
@@ -68,7 +68,6 @@
 {
     NSLog(@"highScoresPressed");
     self.highScoresVC = [[HighScoresViewController alloc] init];
-    [self addChildViewController:self.highScoresVC];
     [self.view insertSubview:self.highScoresVC.view aboveSubview:self.view];
 }
 
@@ -76,7 +75,6 @@
 {
     NSLog(@"settingsPressed");
     self.settingsVC = [[SettingsViewController alloc] init];
-    [self addChildViewController:self.settingsVC];
     [self.view insertSubview:self.settingsVC.view aboveSubview:self.view];
 }
 

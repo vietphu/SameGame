@@ -15,10 +15,14 @@
 @synthesize window = _window;
 @synthesize rootView = _rootView;
 
+@synthesize highScores = _highScores;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    // read from file here into high scores.
     
     self.rootView = [[RootViewController alloc] initWithNibName:@"RootVC" bundle:nil];
     [self.window addSubview:self.rootView.view];

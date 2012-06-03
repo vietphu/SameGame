@@ -15,7 +15,6 @@
 @interface BoardViewController : UIViewController <UIAlertViewDelegate, UITextFieldDelegate>
 
 @property (strong, nonatomic) BoardModel *board;
-@property (strong, nonatomic) HighScoresModel *highScores;
 
 @property (strong, nonatomic) IBOutlet UILabel *lifeCounter;
 @property (strong, nonatomic) IBOutlet UILabel *blocksCounter;

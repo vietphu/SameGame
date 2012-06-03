@@ -11,11 +11,11 @@
 #import "SameGameBlock.h"
 #import "UIColor+RandomColor.h"
 #import "HighScoresModel.h"
+#import "HighScoresProtocol.h"
 
 @implementation BoardViewController
 
 @synthesize board = _board;
-@synthesize highScores = _highScores;
 
 @synthesize lifeCounter = _lifeCounter;
 @synthesize levelCounter = _levelCounter;
@@ -31,7 +31,6 @@
 
     if (self) {
         self.board = [[BoardModel alloc] init];
-        self.highScores = [[HighScoresModel alloc] init];
         
         // Add key-value observing
         self.observableValues = [[NSArray alloc] initWithObjects:@"levelOver", @"levelNum",
@@ -72,7 +71,6 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view
     self.board = nil;
-    self.highScores = nil;
     self.lifeCounter = nil;
     self.blocksCounter = nil;
     self.observableValues = nil;
@@ -97,9 +95,6 @@
 #pragma mark - UIAlertViewDelegate Methods
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
-    NSLog(@"%@", alertView.title);
-    NSLog(@"alertView:didDismissWithButtonIndex:");
-    
     switch (alertView.tag) {
         
         case EXIT_GAME: // Exit Game to Main Menu
@@ -196,7 +191,6 @@
                         change:(NSDictionary *)change context:(void *)context
 {
     if (keyPath == @"levelOver" && self.board.levelOver) {
-        NSLog(@"hey look the level is over");
         [self handleLevelOver];
     }
     
@@ -287,14 +281,7 @@
 #pragma mark - High Scores
 - (BOOL)isHighScore
 {
-    NSNumber *candidateScore = [[NSNumber alloc] initWithInt:self.board.currentScore];
-    
-    for (Score *aScore in self.highScores.topTenScores) {
-        if (candidateScore > aScore.score) {
-            return TRUE;
-        }
-    }
-    
+    // add high score test here.
     return FALSE;
 }
 
@@ -302,6 +289,12 @@
 {
     // add currentScore to a Score object and store in HighScoresModel
     NSLog(@"Will save player: %@ with score: %d", playerName, self.board.currentScore);
+}
+
+- (HighScoresModel *)highScores
+{
+    id<HighScoresProtocol> appDelegate = (id<HighScoresProtocol>)[UIApplication sharedApplication].delegate;
+    return (HighScoresModel *)appDelegate.highScores;
 }
 
 @end

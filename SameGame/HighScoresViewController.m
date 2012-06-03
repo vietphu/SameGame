@@ -7,6 +7,7 @@
 //
 
 #import "HighScoresViewController.h"
+#import "HighScoresProtocol.h"
 
 @interface HighScoresViewController ()
 
@@ -58,6 +59,12 @@
 {
     NSLog(@"returnToMenuPressed");
     [self.view removeFromSuperview];
+}
+
+- (HighScoresModel *)highScores
+{
+    id<HighScoresProtocol> appDelegate = (id<HighScoresProtocol>)[UIApplication sharedApplication].delegate;
+    return (HighScoresModel *)appDelegate.highScores;
 }
 
 @end
