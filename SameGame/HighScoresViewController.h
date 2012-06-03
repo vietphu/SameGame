@@ -8,12 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@class HighScoresModel;
+
 @interface HighScoresViewController : UIViewController
 
 @property (nonatomic, strong) IBOutlet UIButton *returnToMenuButton;
 
 @property (nonatomic, strong) IBOutletCollection(UILabel) NSMutableArray *playerNames;
 @property (nonatomic, strong) IBOutletCollection(UILabel) NSMutableArray *playerScores;
+
+@property (strong, nonatomic) HighScoresModel *highScores;
 
 - (IBAction)returnToMenuPressed:(id)sender;
 

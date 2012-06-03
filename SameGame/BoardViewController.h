@@ -23,6 +23,8 @@
 
 @property (strong, nonatomic) NSArray *observableValues;
 
+@property (strong, nonatomic) HighScoresModel *highScores;
+
 - (IBAction)mainScreenPressed:(id)sender;
 - (void)exitToMainScreen;
 - (IBAction)resetGamePressed:(id)sender;

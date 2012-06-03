@@ -24,6 +24,8 @@
 
 @synthesize observableValues = _observableValues;
 
+@synthesize highScores = _highScores;
+
 #pragma mark - Initialization
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -41,6 +43,9 @@
                             options:(NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew)
                             context:NULL];
         }
+
+//        need to initialize highScores in AppDelegate before assigning it here.
+//        self.highScores = [self highScores];
     }
     return self;
 }
@@ -75,6 +80,7 @@
     self.blocksCounter = nil;
     self.observableValues = nil;
     self.scoreCounter = nil;
+    self.highScores = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

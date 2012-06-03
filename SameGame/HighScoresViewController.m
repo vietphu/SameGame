@@ -19,11 +19,16 @@
 @synthesize playerNames = _playerNames;
 @synthesize playerScores = _playerScores;
 
+@synthesize highScores = _highScores;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     
     if (self) {
+ 
+//        have to initialize highScores in AppDelegete before assigning the value here.
+//        self.highScores = [self highScores];
         
     }
     
