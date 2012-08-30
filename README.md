@@ -5,4 +5,12 @@ An incomplete iOS implementation of the classic [Japanese game](http://en.wikipe
 
 ![Screenshot of Gameplay](https://raw.github.com/CommanderCoriander/SameGame/master/screenshot.png)
 
-The code here is released under the [MIT License](http://opensource.org/licenses/mit-license.php).
+Notes
+-----
+
+The present implementation allows for game play with animations and multi-levels.
+
+License
+-------
+
+Released under the [MIT License](http://opensource.org/licenses/mit-license.php).
