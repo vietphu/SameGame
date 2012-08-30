@@ -1,7 +1,7 @@
 Same Game for iOS
 -----------------
 
-An incomplete iOS implementation of the classic [Japanese game](http://en.wikipedia.org/wiki/SameGame).
+An incomplete iOS implementation of the classic [Japanese game](http://en.wikipedia.org/wiki/SameGame). The current version supports only the iPad.
 
 ![Screenshot of Gameplay](https://raw.github.com/CommanderCoriander/SameGame/master/screenshot.png)
 
