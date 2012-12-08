@@ -8,7 +8,7 @@ This is a basic implementation of the classic [Japanese game](http://en.wikipedi
 
 Here's a screen shot of gameplay:
 
-![Screenshot of Gameplay](https://raw.github.com/CommanderCoriander/SameGame/master/screenshot.png)
+![Screenshot of Gameplay](https://raw.github.com/enocom/SameGame/master/screenshot.png)
 
 Features
 --------
